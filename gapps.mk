@@ -8,6 +8,7 @@ PRODUCT_PACKAGES := $(filter-out GoogleContacts, $(PRODUCT_PACKAGES))
 
 PRODUCT_PACKAGES += \
 	phh-gapps-overrides \
+	Search \
 	Chrome \
 	GoogleContactsSyncAdapter \
 	talkback \
@@ -23,7 +24,7 @@ PRODUCT_COPY_FILES += \
 	device/phh/treble/empty-permission.xml:system/etc/permissions/com.google.android.camera.experimental2017.xml
 
 DEVICE_PACKAGE_OVERLAYS += device/phh/treble/overlay-gapps
-GAPPS_VARIANT := pico
+GAPPS_VARIANT := micro
 DONT_DEXPREOPT_PREBUILTS := true
 WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := true
 GAPPS_FORCE_PACKAGE_OVERRIDES := true
@@ -31,6 +32,7 @@ GAPPS_FORCE_BROWSER_OVERRIDES := true
 GAPPS_FORCE_WEBVIEW_OVERRIDES := true
 PRODUCT_PACKAGES += \
        Chrome \
+       Search \
        CalculatorGoogle \
        PrebuiltDeskClockGoogle \
        CalendarGooglePrebuilt \
